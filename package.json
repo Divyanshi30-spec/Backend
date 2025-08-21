@@ -4,16 +4,24 @@
   "description": "",
   "type": "module",
   "license": "ISC",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+    "dev": "node  ./src/app.js"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.7.0",
+    "cookieparser": "^0.1.0",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "mongoose": "^8.17.2"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.17.2",
+    "mongoose-aggregate-paginate-v2": "^1.1.4",
+    "multer": "^2.0.2",
+    "router": "^2.2.0"
   }
 }
