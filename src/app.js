@@ -2,7 +2,7 @@ import express from "express"
 import cors from "cors"
 import dotenv from "dotenv"
 import connectDB from "./db/index.js"
-
+import router from "./routes/user.routes.js"
 
 const app = express()
 dotenv.config({
@@ -15,13 +15,15 @@ app.use(cors("*"))
 // app.use(express.urlencoded({ extended: true, limit: "16kb" }))
 // app.use(express.static("public"))
 // app.use(cookieparser())
-
 // routes import 
 // routes declaration
 app.use(express.json());
-app.use('/' ,(req,res) => {
-    res.send("hi I'm working!");
-})
+// app.use('/' ,(req,res) => {
+//     res.send("hi I'm working!");
+// })
+
+app.use('/api/v1/users',router)
+
 connectDB()
 try {
        app.listen(process.env.PORT || 8000 , ()=>{
@@ -33,3 +35,4 @@ try {
 }
 
 export { app }
+

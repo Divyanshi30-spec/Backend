@@ -88,6 +88,13 @@ const registerUser = asyncHandler(async (req,res)=>{
     })
 })
 
+// OR
+// const registerUser = async(req,res)=>{
+//        res.status(200).json({
+//         message:"hey this a function of controller"
+//        })
+// }
+
 
 const userHey= asyncHandler(async (req,res)=>{
       res.json({
