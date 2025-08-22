@@ -15,7 +15,7 @@ app.use(express.static("public"));
 // app.use(express.urlencoded({ extended: true, limit: "16kb" }))
 // app.use(express.static("public"))
 // app.use(cookieparser())
-// routes import
+
 // routes declaration
 app.use(express.json());
 // app.use('/' ,(req,res) => {
