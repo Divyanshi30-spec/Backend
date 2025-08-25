@@ -32,6 +32,7 @@ app.get("/health", (req, res) => {
   }
 });
 
+
 connectDB();
 try {
   app.listen(process.env.PORT || 8000, () => {
@@ -40,3 +41,4 @@ try {
 } catch (error) {
   console.log(error);
 }
+

@@ -1,5 +1,10 @@
 import { Router } from "express";
-import { getUserChannelProfile, getWatchHistory, registerUser, updateAccountDetails } from "../controllers/user.controllers.js";
+import {
+  getUserChannelProfile,
+  getWatchHistory,
+  registerUser,
+  updateAccountDetails,
+} from "../controllers/user.controllers.js";
 // import {verifyJwt} from "../middlewares/auth.middleware.js"
 import { upload } from "../middlewares/multer.middleware.js";
 // import { verify } from "jsonwebtoken";
@@ -14,14 +19,13 @@ router.route("/register").post(
       name: "avatar",
       maxCount: 1,
     },
-    // {
-    //   name: "coverImage",
-    //   maxCount: 1,
-    // },
+    {
+      name: "coverImage",
+      maxCount: 1,
+    },
   ]),
   registerUser
 );
-
 
 // router.route("/change-password").post(verifyJwt, changeCurrentPassword)
 // router.route("/current-user").get(verifyJWT, getCurrentUser)
@@ -33,3 +37,4 @@ router.route("/register").post(
 
 export default router;
 
+// C:\Users\MST4\Documents\Backend\backend\public\pexels-photo-1315655.jpeg
